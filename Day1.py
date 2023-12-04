@@ -11,13 +11,13 @@ with open(r"C:\Users\clare\Advent-of-code-2023\Day1\input.txt", 'r') as itemlist
 # Get first calibration value
 def get_first_value(string):
     for s in string:
-        if s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']:
+        if s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             return s
 
 # Get last calibration value
 def get_last_value(string):
     for s in string[::-1]:
-        if s in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']:
+        if s in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             return s
 
 def get_calibration_total_pt1(lines):
@@ -68,10 +68,9 @@ def convert_to_digit(number):
                 'six' : '6', 
                 'seven' : '7',
                 'eight' : '8', 
-                'nine' : '9', 
-                'zero' : '0',
+                'nine' : '9'
                 }
-    if number in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']:
+    if number in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
         return number
     else:
         return num_dict[number]
